@@ -8,8 +8,8 @@
 
 <script>
 import HeaderDC from './components/HeaderDC.vue'
-import MainDC from './components/MainDC.vue'
-import FooterDC from './components/FooterDC.vue'
+import MainDC from './components/MainDC'
+import FooterDC from './components/FooterDC'
 
 export default {
   name: 'App',
