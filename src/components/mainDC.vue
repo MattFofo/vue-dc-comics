@@ -2,48 +2,50 @@
 <div class="container">
     <div class="main-grid"></div>
     <div class="main-banner">
-        <div v-for="(link, index) in bannerLinks" :key="index">
-        <a :href="link.href">
-            <img :src="'../assets/img/' + link.img" :alt="link.text">
+        <div>
+        <a v-for="(link, index) in bannerLinks" :key="index" :href="link.href">
+            <img :src="link.img" :alt="link.text">
             <div>{{ link.text }}</div>    
+        </a>
+        <a href="">
+            <img src="../assets/img/buy-dc-power-visa.svg" alt="">
+            <div>DC POWER VISA</div>
         </a>
         </div>
     </div>
 </div>
   
 </template>
-
 <script>
+import img1 from '../assets/img/buy-comics-digital-comics.png';
+import img2 from '../assets/img/buy-comics-merchandise.png';
+import img3 from '../assets/img/buy-comics-shop-locator.png';
+import img4 from '../assets/img/buy-comics-subscriptions.png';
 export default {
-    name: 'mainDC',
+    name: 'MainDC',
     data() {
         return {
             bannerLinks: [
                 {
                     href: '#',
-                    img: 'buy-comics-digital-comics.png',
+                    img: img1,
                     text: 'DIGITAL COMICS',
                 },
                 {
                     href: '#',
-                    img: 'buy-comics-merchandise.png',
+                    img: img2,
                     text: 'DC MERCHANDISE',
                 },
                 {
                     href: '#',
-                    img: 'buy-comics-subscription.png',
+                    img: img3,
                     text: 'SUBSCRIPTION',
                 },
                 {
                     href: '#',
-                    img: 'buy-comics-shop-locator.png',
+                    img: img4,
                     text: 'COMIC SHOP LOCATOR',
                 },
-                {
-                    href: '#',
-                    img: 'buy-dc-power-visa.png',
-                    text: 'DC POWER VISA',
-                }
             ]
         }
     }
