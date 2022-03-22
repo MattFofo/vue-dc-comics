@@ -1,16 +1,19 @@
 <template>
   <div id="app">
         <HeaderDC />
+        <mainDC />
   </div>
 </template>
 
 <script>
 import HeaderDC from './components/HeaderDC.vue'
+import mainDC from './components/mainDC.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderDC
+    HeaderDC,
+    mainDC
   }
 }
 </script>
