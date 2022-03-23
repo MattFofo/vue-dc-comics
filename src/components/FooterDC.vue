@@ -214,6 +214,7 @@ export default {
         }
     }
     .footer-socials-bg {
+        height: 6rem;
         background-color: darkgrey;
     }
     .footer-socials {

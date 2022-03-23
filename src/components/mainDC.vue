@@ -1,5 +1,6 @@
 <template>
 <main>
+    <img src="../assets/img/jumbotron.jpg" alt="" class="jumbotron-cover">
     <div class="main-grid">
         <div class="container">
             <CardComic v-for="comic in comicCards" 
@@ -144,6 +145,12 @@ export default {
 <style scoped lang="scss">
 @import '../assets/styles/partials/variables.scss';
 @import '../assets/styles/partials/general.scss';
+    .jumbotron-cover {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: top;
+    }
     .main-grid {
         background-color: $secondaryColor;
         .container {
@@ -151,7 +158,6 @@ export default {
             flex-wrap: wrap;
             justify-content: space-around;
             div {
-                width: 100%;
                 flex: 0 0 16%;
                 word-wrap: anywhere;
             }
