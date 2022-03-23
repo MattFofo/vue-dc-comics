@@ -15,6 +15,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+    img {
+    height: 192px;
+    object-fit: none;
+    object-position: top;
+    width: 192px;
+}
 </style>

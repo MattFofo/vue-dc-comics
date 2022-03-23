@@ -1,10 +1,12 @@
 <template>
 <main>
     <div class="main-grid">
-        <CardComic v-for="comic in comicCards" 
-        :key="comic.series" 
-        :comic-thumb="comic.thumb" 
-        :comic-series="comic.series" />
+        <div class="container">
+            <CardComic v-for="comic in comicCards" 
+            :key="comic.series" 
+            :comic-thumb="comic.thumb" 
+            :comic-series="comic.series" />
+        </div>
     </div>
     <div class="main-banner">
     <div class="container">
@@ -144,8 +146,16 @@ export default {
 @import '../assets/styles/partials/general.scss';
     .main-grid {
         background-color: $secondaryColor;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr auto;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            div {
+                width: 100%;
+                flex: 0 0 16%;
+                word-wrap: anywhere;
+            }
+        }
     }
     .main-banner {
         text-align: center;
